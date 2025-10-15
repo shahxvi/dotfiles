@@ -38,7 +38,7 @@ alias la="ls -la"
 alias lg="lazygit"
 alias df="duf"
 alias fetch="fastfetch"
-alias update="sudo dnf upgrade; flatpak update"
+alias update="sudo dnf upgrade; fwupdmgr upgrade; flatpak update"
 alias cls="clear"
 alias uname="uname -a"
 alias c="cd"
@@ -59,9 +59,12 @@ function bashrc() {
         if bash -n ~/.bashrc; then
                 source ~/.bashrc
         else
-                echo ".bashrc not sourced"
+                echo "~/.bashrc not sourced"
         fi
 }
 
 # Bash Greeting
-echo "Hello, $USER! Today is $(date)" | cowsay
+function greeting() {
+        echo "Hello, $USER! Today is $(date)" | cowsay
+}
+greeting
