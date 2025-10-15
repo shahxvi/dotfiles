@@ -50,7 +50,6 @@ alias e="emacs"
 alias v="vim"
 alias n="nano"
 
-
 # Zoxide
 eval "$(zoxide init bash)"
 
@@ -65,5 +64,4 @@ function bashrc() {
 }
 
 # Bash Greeting
-echo | cal
 echo "Hello, $USER! Today is $(date)" | cowsay
