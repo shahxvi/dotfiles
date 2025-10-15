@@ -38,7 +38,6 @@ alias la="ls -la"
 alias lg="lazygit"
 alias df="duf"
 alias fetch="fastfetch"
-alias update="sudo dnf upgrade; fwupdmgr upgrade; flatpak update"
 alias cls="clear"
 alias uname="uname -a"
 alias c="cd"
@@ -61,6 +60,11 @@ function bashrc() {
         else
                 echo "~/.bashrc not sourced"
         fi
+}
+
+# Update
+function update() {
+        sudo dnf upgrade; fwupdmgr upgrade; flatpak update
 }
 
 # Bash Greeting
