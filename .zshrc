@@ -118,6 +118,7 @@ alias e="emacs"
 alias v="nvim"
 alias n="nano"
 
+# Default Editor
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 
@@ -127,23 +128,35 @@ eval "$(zoxide init zsh)"
 # The Fuck (a magnificent app, inspired by a @liamosaur tweet, that corrects errors in previous console commands)
 eval $(thefuck --alias)
 
-# Function to update and then source .zshrc
+# Edit and then source .zshrc
 function zsh() {
         nvim ~/.zshrc
         source ~/.zshrc
 }
 
-# Function to update .vimrc
+# Edit .vimrc
 function vimrc() {
         vim ~/.vimrc
 }
 
+# Update system
 function update() {
         sudo dnf upgrade; flatpak update; fwupdmgr upgrade
 }
 
+# Git function
+# upload() {
+#       local message="$*"
+#  if [ -z "$message" ]; then
+#       read "Enter commit message: "
+#  fi
+#
+#  git add . && git commit -m "$message" && git push || {
+#       echo "Error: Something went wrong with the commit or push."
+#  }
+
 # Bash Greeting
 function greeting() {
-        echo "Hello, $USER! Today is $(date +"%A, %d %B %Y (%r)")" | cowsay
+        echo "Hello, $USER! Today is $(date +"%A, %d %B %Y (%r)")" | cowsay -f dragon-and-cow | lolcat
 }
 greeting
