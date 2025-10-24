@@ -1,5 +1,8 @@
 # Linux dotfiles
 
+
+## Directory Tree
+```
 dotfiles
 ├── .bashrc
 ├── .config
@@ -11,3 +14,4 @@ dotfiles
 ├── README.md
 ├── .vimrc
 └── .zshrc
+```
