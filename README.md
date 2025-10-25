@@ -1,6 +1,5 @@
 # Linux dotfiles
 
-
 ## Directory Tree
 ```
 dotfiles
